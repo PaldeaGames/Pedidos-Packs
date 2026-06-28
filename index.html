@@ -511,6 +511,7 @@ function sincronizarCarritoConGrid(){
       else CARRITO[idx].qty=qty;
     } else {
       if(idx>=0) CARRITO.splice(idx,1);
+      el.querySelector('.qty-val').textContent='0';
     }
   });
   actualizarCarritoBtn();
