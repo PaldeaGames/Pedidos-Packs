@@ -39,11 +39,11 @@ label .req{color:var(--red);margin-left:2px}
 @media(max-width:600px){.products-grid{grid-template-columns:repeat(2,1fr)}}
 .product-item{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);padding:0;display:flex;flex-direction:column;cursor:pointer;transition:border-color .2s,background .2s,transform .15s;user-select:none;overflow:hidden;position:relative}
 .product-item:hover{border-color:var(--border-strong);transform:translateY(-2px)}
-.product-item.selected{border-color:var(--accent);background:var(--accent-dim)}
-.product-check{position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border-strong);background:var(--surface);display:flex;align-items:center;justify-content:center;z-index:2;transition:all .2s}
-.product-item.selected .product-check{background:var(--accent);border-color:var(--accent)}
-.product-check svg{opacity:0;transition:opacity .15s}
-.product-item.selected .product-check svg{opacity:1}
+
+
+.product-item.selected 
+
+.product-item.selected 
 .product-thumb-wrap{width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--surface);flex-shrink:0;position:relative}
 .product-thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
 .product-thumb:hover{transform:scale(1.04)}
@@ -207,7 +207,6 @@ label .req{color:var(--red);margin-left:2px}
         <div class="products-grid" id="productsGrid">
 
           <div class="product-item" data-product="Pack 55 cartas" data-id="pack-55" data-price="5500" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2055%20cartas.png" alt="Pack 55" onerror="this.style.display='none'">
@@ -227,7 +226,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 55 + HIT" data-id="pack-55-hit" data-price="8500" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2055%20+%20HIT.png" alt="Pack 55 + HIT" onerror="this.style.display='none'">
@@ -247,7 +245,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 20 Holográficas" data-id="pack-20-holo" data-price="5000" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2020%20holograficas.PNG" alt="Pack 20 Holo" onerror="this.style.display='none'">
@@ -267,7 +264,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 20 Holográficas + HIT" data-id="pack-20-holo-hit" data-price="8000" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2020%20holo%20+%20HIT.png" alt="Pack 20 Holo + HIT" onerror="this.style.display='none'">
@@ -287,7 +283,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 20 Reverse" data-id="pack-20-rev" data-price="5000" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2020%20reverse.png" alt="Pack 20 Reverse" onerror="this.style.display='none'">
@@ -307,7 +302,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 20 Reverse + HIT" data-id="pack-20-rev-hit" data-price="8000" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2020%20reverse%20+%20HIT.png" alt="Pack 20 Reverse + HIT" onerror="this.style.display='none'">
@@ -327,7 +321,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 50 Entrenadores" data-id="pack-entrena" data-price="5000" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/pack%2050%20entrenadores.png" alt="Pack 50 Entrenadores" onerror="this.style.display='none'">
@@ -347,7 +340,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="Pack 55 One Piece" data-id="pack-55-op" data-price="5500" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/Pack%2055_One_Piece.jpg" alt="Pack 55 One Piece" onerror="this.style.display='none'">
@@ -367,7 +359,6 @@ label .req{color:var(--red);margin-left:2px}
           </div>
 
           <div class="product-item" data-product="10 cartas HIT" data-id="pack-hit" data-price="24990" data-stock="10">
-            <div class="product-check"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1.5" stroke="#0d0d0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="product-thumb-wrap">
               <div class="zoom-eye" onclick="event.stopPropagation();openZoom(this.closest('.product-thumb-wrap').querySelector('img').src)"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <img class="product-thumb" src="https://raw.githubusercontent.com/PaldeaGames/Pedidos-Packs/main/10%20%20cartas%20HIT.png" alt="10 cartas HIT" onerror="this.style.display='none'">
@@ -461,13 +452,7 @@ var ckEntregaMode='';
 var ckDireccionMode='domicilio';
 var SCRIPT_URL='https://script.google.com/macros/s/AKfycbyuJl8BzJREN4yzPI9W77GDR-YjWhP0nd0RTbMxs219NY3dfyBIQ1MttVTMgSGJq_ES/exec';
 
-document.querySelectorAll('.product-item').forEach(function(el){
-  el.addEventListener('click',function(e){
-    if(e.target.closest('.qty-btn')||e.target.closest('.zoom-eye')) return;
-    el.classList.toggle('selected');
-    sincronizarCarritoConGrid();
-  });
-});
+// selection driven by qty only
 
 function cambiarQtyProd(btn,delta){
   var prod=btn.closest('.product-item');
@@ -484,10 +469,8 @@ function cambiarQtyProd(btn,delta){
   var img=imgEl?imgEl.src:'';
   var idx=CARRITO.findIndex(function(c){return c.id===id;});
   if(v===0){
-    prod.classList.remove('selected');
     if(idx>=0) CARRITO.splice(idx,1);
   } else {
-    prod.classList.add('selected');
     if(idx<0) CARRITO.push({id:id,nombre:nombre,precio:precio,qty:v,img:img});
     else CARRITO[idx].qty=v;
   }
@@ -497,27 +480,7 @@ function cambiarQtyProd(btn,delta){
 }
 
 function sincronizarCarritoConGrid(){
-  document.querySelectorAll('.product-item').forEach(function(el){
-    var id=el.dataset.id;
-    var nombre=el.dataset.product;
-    var precio=parseInt(el.dataset.price);
-    var qty=parseInt(el.querySelector('.qty-val').textContent);
-    var imgEl=el.querySelector('.product-thumb');
-    var img=imgEl?imgEl.src:'';
-    var idx=CARRITO.findIndex(function(c){return c.id===id;});
-    if(el.classList.contains('selected')){
-      if(qty===0){qty=1;el.querySelector('.qty-val').textContent='1';}
-      if(idx<0) CARRITO.push({id:id,nombre:nombre,precio:precio,qty:qty,img:img});
-      else CARRITO[idx].qty=qty;
-    } else {
-      if(idx>=0) CARRITO.splice(idx,1);
-      el.querySelector('.qty-val').textContent='0';
-    }
-  });
-  actualizarCarritoBtn();
-  updateSummary();
-  document.getElementById('stepResumen').style.display=CARRITO.length?'block':'none';
-  document.getElementById('err-productos').classList.remove('show');
+  // no-op: qty changes handled directly in cambiarQtyProd
 }
 
 function actualizarCarritoBtn(){
@@ -608,8 +571,7 @@ function quitarCarrito(id){
 function sincronizarGridDesdeCarrito(id,qty){
   var el=document.querySelector('[data-id="'+id+'"]');
   if(!el) return;
-  if(qty===0){el.classList.remove('selected');el.querySelector('.qty-val').textContent='1';}
-  else{el.querySelector('.qty-val').textContent=qty;}
+  el.querySelector('.qty-val').textContent=qty;
 }
 
 function irACheckout(){if(!CARRITO.length) return;CHECKOUT_VIEW='form';renderCarritoPanel();}
