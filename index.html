@@ -441,7 +441,7 @@ var CARRITO=[];
 var CHECKOUT_VIEW='cart';
 var ckEntregaMode='';
 var ckDireccionMode='domicilio';
-var SCRIPT_URL='https://script.google.com/macros/s/AKfycbyuJl8BzJREN4yzPI9W77GDR-YjWhP0nd0RTbMxs219NY3dfyBIQ1MttVTMgSGJq_ES/exec';
+var SCRIPT_URL='https://script.google.com/macros/s/AKfycbymkq81nv85-kf3QIbjnkPfYyQwN6PZln9r8GsJ7iVMYbgL5CtvLCADHc9c5CCXtMCl/exec';
 
 // selection driven by qty only
 
@@ -752,7 +752,7 @@ async function enviarPedidoCK(){
   var lastNum=parseInt(localStorage.getItem('pg_order_counter')||'0');
   var newNum=lastNum+1;
   localStorage.setItem('pg_order_counter',newNum);
-  var orderNum='PG-'+String(newNum).padStart(3,'0');
+  var orderNum='PACK-'+String(newNum).padStart(4,'0');
   var orderItems=CARRITO.map(function(c){return{nombre:c.nombre,cantidad:c.qty,precio_unitario:c.precio,subtotal:c.precio*c.qty};});
   var totalPedido=CARRITO.reduce(function(s,c){return s+c.precio*c.qty;},0);
   var orderData={
@@ -783,7 +783,7 @@ async function enviarPedidoCK(){
   }
 
   try{
-    var url=SCRIPT_URL+'?data='+encodeURIComponent(JSON.stringify(orderData));
+    var url=SCRIPT_URL+'?carpeta=PPG&data='+encodeURIComponent(JSON.stringify(orderData));
     var res=await fetch(url);
     var data=await res.json();
     if(data.success===false){alert('Error: '+(data.error||'Intenta de nuevo'));btn.disabled=false;btn.textContent='Enviar pedido';return;}
@@ -811,7 +811,7 @@ function closeZoom(){document.getElementById('zoomOverlay').classList.remove('op
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){cerrarInfoPacks();closeZoom();cerrarCarrito();}});
 
 function cargarInventario(){
-  fetch(SCRIPT_URL)
+  fetch(SCRIPT_URL+'?carpeta=PPG')
     .then(function(r){return r.json();})
     .then(function(items){
       items.forEach(function(item){
